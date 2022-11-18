@@ -20,7 +20,7 @@ body, html {
   cursor: pointer;
   padding: .8rem 1.5rem;
   color: #ffff;
-  background: linear-gradient(90deg, rgb(30, 133, 102, 1) 0%,
+  background: linear-gradient(90deg, rgb(30, 133, 102) 0%,
   rgb(123, 234, 241) 100%);
   border-radius: 3rem;
   border: none;

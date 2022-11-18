@@ -5,7 +5,7 @@ import React from 'react'
 import Quiz from "../img/imgw.png"
 import"./Welcome.css";
 
-const Welcome = () => {
+export const Welcome = () => {
 
   const [quizState, dispatch] = useContext(QuizContext);
 
@@ -19,4 +19,4 @@ const Welcome = () => {
   )
 }
 
-export default Welcome;
+
