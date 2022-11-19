@@ -20,9 +20,22 @@ export const Questions = () => {
         <h2>{currentQuestions.questions}</h2>
         <div id='options-container'>
             {currentQuestions.options.map((option) => (
-                <Option option={option} key={option} answer={currentQuestions.answer} selectOption = {() => onSelectOption(option)}/>
+                <Option option={option} key={option} answer={currentQuestions.answer} selectOption = {() => onSelectOption(option)} hide={quizState.optionToHide === option ? "hide" : null}/>
             ))}
         </div>
+        {!quizState.answerSelected && !quizState.help && (
+            <>
+                {currentQuestions.tip && (
+                    <button onClick={() => dispatch({ type: "SHOW_TIP" })}>Dica</button>
+                )}
+                <button onClick={() => dispatch({ type: "REMOVE_OPTION" })}>
+                    Excluir uma
+                </button>
+            </>
+        )}
+        {!quizState.answerSelected && quizState.help === "tip" && (
+            <p>{currentQuestions.tip}</p>
+        )}
         {quizState.answerSelected && (
           <button onClick={() => dispatch({type: "CHANGE_QUESTION"})}>Continuar</button>  
         )}
