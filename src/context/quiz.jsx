@@ -90,11 +90,7 @@ const quizReducer = (state, action) => {
         }
 
         case "REMOVE_OPTION": {
-            const questionWithoutOption = state.questions[state.currentQuestion];
-
-            console.log(state.currentQuestion);
-
-            console.log(questionWithoutOption);
+            const questionWithoutOption = state.questions[state.currentQuestion]
 
             let repeat = true;
             let optionToHide;

@@ -20,7 +20,11 @@ export const Questions = () => {
         <h2>{currentQuestions.questions}</h2>
         <div id='options-container'>
             {currentQuestions.options.map((option) => (
-                <Option option={option} key={option} answer={currentQuestions.answer} selectOption = {() => onSelectOption(option)} hide={quizState.optionToHide === option ? "hide" : null}/>
+                <Option option={option} 
+                key={option} 
+                answer={currentQuestions.answer} 
+                selectOption = {() => onSelectOption(option)} 
+                hide={quizState.optionToHide === option ? "hide" : null}/>
             ))}
         </div>
         {!quizState.answerSelected && !quizState.help && (

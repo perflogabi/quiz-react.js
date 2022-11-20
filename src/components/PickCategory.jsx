@@ -4,7 +4,7 @@ import { QuizContext } from "../context/quiz";
 
 import "./PickCategory.css";
 
-const PickCategory = () => {
+export const PickCategory = () => {
   const [quizState, dispatch] = useContext(QuizContext);
 
   function chooseCategoryAndReorderQuestions(category) {
@@ -29,5 +29,3 @@ const PickCategory = () => {
     </div>
   );
 };
-
-export default PickCategory;
